@@ -22,6 +22,9 @@ module.exports = {
           4: 'rgba(13, 6, 45, 1)'
         }
       },
+      fontFamily: {
+        jakarta: ["Plus Jakarta", "sans"],
+      },
     },
   },
   plugins: [],
