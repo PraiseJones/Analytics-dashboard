@@ -10,21 +10,36 @@ module.exports = {
     },
     extend: {
       colors: {
-        60: 'rgba(156, 164, 171, 1)',
-        'alertError': 'rgba(237, 84, 78, 1)',
-        'alertSuccess': 'rgba(102, 200, 123, 1)',
-        'green': 'rgba(52, 202, 165, 1)',
-        'unselected': 'rgba(13, 6, 45, 1)',
-        'main-sec': {
-          1: 'rgba(226, 166, 64, 1)',
-          2: 'rgba(13, 6, 45, 1)',
-          3: 'rgba(226, 166, 64, 1)',
-          4: 'rgba(13, 6, 45, 1)'
+        primary: '#bb372f',
+        secondary: '#3a3f51',
+        'success': '#00ac56',
+        'error': '#ff1f7d',
+        'warning': '#f5bf3d',
+        neutral: {
+          'white': '#ffffff',
+          'background': '#fdfdfd'
+        },
+        grayscale: {
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#b2abab',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
         }
       },
       fontFamily: {
-        jakarta: ["Plus Jakarta", "sans"],
+        jakarta: ['"Plus Jakarta Sans", sans-serif'],
       },
+      // fontSize: {
+      //   'xs': '0.75rem',
+      //   '2xl': '2rem',  
+      //   '4xl': '3.5rem',  
+      // },
     },
   },
   plugins: [],

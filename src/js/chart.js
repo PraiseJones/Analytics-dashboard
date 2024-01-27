@@ -1,12 +1,11 @@
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('myChart').getContext('2d');
 
-function createGradient(ctx, f, toColor) {
-  const gradient = ctx.createLinearGradient(0, 0, 0, 400); // Adjust height as needed
-  gradient.addColorStop(0, fromColor);
-  gradient.addColorStop(1, toColor);
+function createGradient(ctx) {
+  const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, 'rgba(52, 202, 165, 1)');
+  gradient.addColorStop(1, 'rgba(52, 202, 165, 0.10)');
   return gradient;
 }
-
 
 new Chart(ctx, {
   type: 'bar',
@@ -17,20 +16,30 @@ new Chart(ctx, {
       borderWidth: 1,
       borderRadius: 500,
       backgroundColor: 'rgba(52, 202, 165, 0.10)',
-      hoverBackgroundColor: '(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%)',
+      hoverBackgroundColor: createGradient(ctx),
     }]
   },
   options: {
     responsive: true,
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          stepSize: 5000
+        },
+        color: '#ffffff'
+      },
+      x: {
+        grid:{
+          display: false,
+        },
       }
+      
     },
     plugins: {
-    legend: {
-      display: false
-    }
+      legend: {
+        display: false
+      }
     },
   }
 });
